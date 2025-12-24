@@ -169,7 +169,8 @@ def process_calendar_request(user_input: str) -> Optional[EventConfirmation]:
 # Step 4: Test the chain with a valid input
 # --------------------------------------------------------------
 
-user_input = "Let's schedule a 1h team meeting next Tuesday at 2pm with Alice and Bob to discuss the project roadmap."
+# user_input = "Let's schedule a 1h team meeting next Tuesday at 2pm with Alice and Bob to discuss the project roadmap."
+user_input = "can you sent an email tomorrow 1 PM to alice and bob to discuss the project roadmap?"
 
 result = process_calendar_request(user_input)
 if result:
@@ -180,16 +181,16 @@ else:
     print("This doesn't appear to be a calendar event request.")
 
 
-# --------------------------------------------------------------
-# Step 5: Test the chain with an invalid input
-# --------------------------------------------------------------
+# # --------------------------------------------------------------
+# # Step 5: Test the chain with an invalid input
+# # --------------------------------------------------------------
 
-user_input = "Can you send an email to Alice and Bob to discuss the project roadmap?"
+# user_input = "Can you send an email to Alice and Bob to discuss the project roadmap?"
 
-result = process_calendar_request(user_input)
-if result:
-    print(f"Confirmation: {result.confirmation_message}")
-    if result.calendar_link:
-        print(f"Calendar Link: {result.calendar_link}")
-else:
-    print("This doesn't appear to be a calendar event request.")
+# result = process_calendar_request(user_input)
+# if result:
+#     print(f"Confirmation: {result.confirmation_message}")
+#     if result.calendar_link:
+#         print(f"Calendar Link: {result.calendar_link}")
+# else:
+#     print("This doesn't appear to be a calendar event request.")
